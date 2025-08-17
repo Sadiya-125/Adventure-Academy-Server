@@ -3,7 +3,7 @@ const cors = require("cors");
 const { YoutubeTranscript } = require("youtube-transcript");
 
 const app = express();
-app.use(cors({ origin: "http://localhost:8080" }));
+app.use(cors({ origin: "*" }));
 
 app.get("/api/transcript/:videoId", async (req, res) => {
   try {
